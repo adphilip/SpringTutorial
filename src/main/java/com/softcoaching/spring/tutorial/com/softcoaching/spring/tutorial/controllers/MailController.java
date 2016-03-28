@@ -13,10 +13,15 @@ import javax.annotation.Resource;
 
 @RestController
 public class MailController {
+    /* Resource and Component with a name
+    @Resource(name="smtpMailSender")
+    */
     @Resource
     private MailSender mailSender;
     /*classic way*/
     //private MailSender mailSender = new MockMailSender();
+
+
 
     @RequestMapping("/mail")
     public String sendMail() {
