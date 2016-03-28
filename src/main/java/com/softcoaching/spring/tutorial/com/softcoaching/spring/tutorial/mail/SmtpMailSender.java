@@ -9,7 +9,11 @@ import org.springframework.stereotype.Component;
  * Created by afilipescu on 3/25/16.
  */
 @Primary
-@Component
+/**
+ * Default name from Component Bean is smtpMailSender
+ * WE can change the name of this
+ */
+@Component("smtpMS")
 public class SmtpMailSender implements MailSender {
     private static final Log log = LogFactory.getLog(SmtpMailSender.class);
 
